@@ -1,0 +1,15 @@
+<script src="/socket.io/socket.io.js"></script>
+
+<script>
+      var socket = io.connect('http://localhost:4002');
+      socket.on('send', (rst)=>{
+            document.getElementById('messages').innerHTML = rst;
+           console.log(rst);
+      });
+
+</script>
+
+<h2>
+      <p> Recibido: </p>
+      <div id="messages"></div>
+</h2>
